@@ -13,9 +13,9 @@ description: Kyungmyun An Work & Life
 github_username: kaiser1227
 permalink: /:year/:month/:day/:title/
 # this is the url root of the view source link on the footer page.
-viewsourceroot: https://github.com/kaiser1227/akm.github.io/blob/master/
+viewsourceroot: https://github.com/kaiser1227/kaiser1227.github.io/blob/master/
 # this is the url root of the create page link on the footer page.
-newsourceroot: https://github.com/kaiser1227/akm.github.io/new/master
+newsourceroot: https://github.com/kaiser1227/kaiser1227.github.io/new/master
 #########################################
 # for duoshuo.com commenting system, uncomment following line if you do not want to include duoshuo.com.
 #duoshuo_shortname: lixizhi
