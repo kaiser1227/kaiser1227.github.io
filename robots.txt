@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+User-agent: *
+Disallow: /privateData/
+
+Sitemap: https://kaiser1227.github.io/sitemap.xml
