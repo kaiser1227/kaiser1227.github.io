@@ -4,6 +4,21 @@
   {% include head.html %}
 
  <!--  <body data-spy="scroll" data-target="#myAffix"> -->
+  
+  <script>
+  var scrollUpDelay = 1;
+  var scrollUpSpeed = 30;
+  function scrollUp()
+  {
+    if(document.body.scrollTop<1)
+    {
+      return;
+    }
+    document.body.scrollTop=document.body.scrollTop-scrollUpSpeed;
+    setTimeout('scrollUp()',scrollUpDelay);
+  }
+  </script>
+  
   <body>
 
     {% include header.html %}
@@ -11,10 +26,9 @@
     <div id="main" class="container main">
       {{ content }}
     </div>
-
     
     <div id="top" data-toggle="tooltip" data-placement="left" title="back to top">
-      <a href="javascript:;">
+      <a href="javascript:scrollUp();">
         <div class="arrow"></div>
         <div class="stick"></div>
       </a>
