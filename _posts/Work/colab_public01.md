@@ -1,4 +1,9 @@
-
+---
+layout: post
+title : 구글 colab, 구글 drive를 이용하여 공공데이터 가져오기
+comments: true
+categories: Work
+---
 
 ```python
 # 구글드라이브 마운트
