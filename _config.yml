@@ -23,7 +23,7 @@ newsourceroot: https://github.com/kaiser1227/kaiser1227.github.io/new/master
 # disqus.com commenting system. please note that it is exclusive with duoshuo.com
 disqus_shortname: https-kaiser1227-github-io
 disqus_url: "http://kaiser1227.github.io"
-g-analytics:UA-136354398-1
+g-analytics: UA-136354398-1
 #########################################
 
 # Build settings
