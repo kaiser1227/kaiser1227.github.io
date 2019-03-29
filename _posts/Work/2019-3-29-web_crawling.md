@@ -6,7 +6,7 @@ categories: Python
 ---
 
 
-###requests로 html 소스 가져오기
+### requests로 html 소스 가져오기
 
 ```python
 import requests
@@ -25,7 +25,7 @@ is_ok = req.ok
 
 html
 ```
-###beautifulSoup로 html 소스 가져오기
+### beautifulSoup로 html 소스 가져오기
 ```python
 import requests
 from bs4 import BeautifulSoup
@@ -41,7 +41,7 @@ soup = BeautifulSoup(html, 'html.parser')
 
 soup
 ```
-###html 특정 태그 값 조회하기
+### html 특정 태그 값 조회하기
 ```python
 ## parser.py
 import requests
