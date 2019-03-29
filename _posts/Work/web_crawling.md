@@ -1,3 +1,10 @@
+---
+layout: post
+title : requests와 BeautifulSoup으로 웹 크롤링
+comments: true
+categories: Python
+---
+
 {
   "nbformat": 4,
   "nbformat_minor": 0,
