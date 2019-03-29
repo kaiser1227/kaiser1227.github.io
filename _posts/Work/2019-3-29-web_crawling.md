@@ -1,8 +1,14 @@
+---
+layout: post
+title : requests와 BeautifulSoup으로 웹 크롤링
+comments: true
+categories: Python
+---
 
 
-requests와 BeautifulSoup으로 웹 크롤링
-requests로 html 소스 가져오기
-In [0]:
+###requests로 html 소스 가져오기
+
+```python
 import requests
 
 ## HTTP GET Request
@@ -18,8 +24,9 @@ status = req.status_code
 is_ok = req.ok
 
 html
-beautifulSoup로 html 소스 가져오기
-In [0]:
+```
+###beautifulSoup로 html 소스 가져오기
+```python
 import requests
 from bs4 import BeautifulSoup
 
@@ -33,8 +40,9 @@ html = req.text
 soup = BeautifulSoup(html, 'html.parser')
 
 soup
-html 특정 태그 값 조회하기
-In [0]:
+```
+###html 특정 태그 값 조회하기
+```python
 ## parser.py
 import requests
 from bs4 import BeautifulSoup
@@ -55,3 +63,4 @@ for title in my_titles:
     print(title.text)
     ## Tag의 속성을 가져오기(ex: href속성)
     print(title.get('h2'))
+```
