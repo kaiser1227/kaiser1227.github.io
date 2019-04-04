@@ -1,5 +1,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+	{% include head.html %}
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>지도기반 데이터 분석</title>
@@ -69,7 +70,26 @@ function setPanZoomBar()
 }
 </script> 
 </head>
-<body>
+ <body data-spy="scroll" data-target="#myAffix"> 
+	
+	    {% include header.html %}
+    
+    <div id="main" class="container main">
 	<div id="cont1" style="width:900px;height:600px;"></div>
+    </div>
+    
+    <div id="top" data-toggle="tooltip" data-placement="left" title="back to top">
+      <a href="#">
+        <div class="arrow"></div>
+        <div class="stick"></div>
+      </a>
+    </div>
+
+    {% include footer.html %}
+
+    {% include newpost.html %}
+   
+    {% include analytics.html %}
+	 
  </body>
 </html>
