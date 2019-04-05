@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+<style type="text/css">
+html, body {
+	width: 100%; height: 100%;
+}
+</style>
+ <body data-spy="scroll" data-target="#myAffix"> 
+  <!--<body> --> 
+  
+    {% include header.html %}
+    
+    <div id="main" class="container main">
+      {{ content }}
+    </div>
+    
+    <div id="top" data-toggle="tooltip" data-placement="left" title="back to top">
+      <a href="#">
+        <div class="arrow"></div>
+        <div class="stick"></div>
+      </a>
+    </div>
+
+    {% include footer.html %}
+
+    {% include newpost.html %}
+   
+    {% include analytics.html %}
+  </body>
+</html>
