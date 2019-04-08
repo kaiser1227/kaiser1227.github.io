@@ -4,7 +4,52 @@ title: GIS
 comments: true
 permalink: /GIS/
 ---
-
+<script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+<script>
+    $(function() {        
+        // Geolocation API에 액세스할 수 있는지를 확인
+        if (navigator.geolocation) {
+            //위치 정보를 얻기
+            navigator.geolocation.getCurrentPosition (function(pos) {
+                $('#latitude').html(pos.coords.latitude);     // 위도
+                $('#longitude').html(pos.coords.longitude); // 경도
+            });
+        } else {
+            alert("이 브라우저에서는 Geolocation이 지원되지 않습니다.")
+        }
+    });
+vw.ol3.MapOptions = {
+      basemapType: vw.ol3.BasemapType.GRAPHIC
+    , controlDensity: vw.ol3.DensityType.EMPTY
+    , interactionDensity: vw.ol3.DensityType.BASIC
+    , controlsAutoArrange: true
+    , homePosition: vw.ol3.CameraPosition
+    , initPosition: vw.ol3.CameraPosition
+   }; 
+      
+  var vmap = new vw.ol3.Map("vmap",  vw.ol3.MapOptions); 
+   
+  function move(x,y,z){
+   var _center = [ x, y ];
+    
+   var z = z;
+   var pan = ol.animation.pan({
+    duration : 2000,
+    source : (vmap.getView().getCenter())
+   });
+   vmap.beforeRender(pan);
+   vmap.getView().setCenter(_center);
+   setTimeout("fnMoveZoom()", 3000);
+  }
+   
+  function fnMoveZoom() {
+   zoom = vmap.getView().getZoom();
+   if (16 > zoom) {
+    vmap.getView().setZoom(14);
+   }
+   
+  };
+</script>
 <SCRIPT language="JavaScript" type="text/javascript" src="https://map.vworld.kr/js/vworldMapInit.js.do?apiKey=5D56C2B3-315D-3150-A624-D231023FB396&domain=kaiser1227.github.io"></SCRIPT>
 <script type="text/javascript">
 var map = null;
@@ -70,4 +115,4 @@ function setPanZoomBar()
 	pZoomBar.redraw();
 }
 </script> 
-<div id="cont1" style="width:900px;height:600px;"></div> 
+<div id="cont1" style="width:900px;height:600px;" onload="javascript:move(latitude,longitude);"></div> 
