@@ -53,7 +53,7 @@ Here are the projects I participated in.
 
 * 흥국화재 BI 시스템 운영
 
-## 2021
+## 2021 ~
 
 * 기술전략팀 빅데이터Lab
 
