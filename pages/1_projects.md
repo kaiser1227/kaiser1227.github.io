@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects
-comments: true
+comments: false
 permalink: /projects/
 ---
 
